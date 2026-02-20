@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. [Your Name] – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="#hero">Dr. [Your Name]</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <img src="assets/profile.jpg" alt="Profile photo" class="hero-avatar" id="heroAvatar" />
+      <div class="hero-text">
+        <h1>Dr. <span class="highlight">[Your Name]</span></h1>
+        <p class="hero-tagline">[Your Research Field] · PhD, [University Name]</p>
+        <p class="hero-subtitle">
+          Researcher passionate about [brief research focus]. Currently [current position or
+          affiliation, e.g., "Postdoctoral Researcher at X" or "seeking opportunities in Y"].
+        </p>
+        <div class="hero-links">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="#publications" class="btn btn-secondary">View Publications</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I recently completed my PhD in <strong>[Your Field]</strong> at
+            <strong>[Your University]</strong>, where I focused on
+            [brief description of your PhD research, e.g., "developing novel machine-learning
+            methods to model X in the context of Y"].
+          </p>
+          <p>
+            Before my PhD, I obtained [your undergraduate/master's degree and institution].
+            My research interests span [list 2–4 broad themes, e.g., "natural language processing,
+            knowledge graphs, and multi-modal learning"].
+          </p>
+          <p>
+            Outside academia I enjoy [personal interests / hobbies, e.g., "hiking, photography,
+            and open-source software"].
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <h3>Education</h3>
+            <ul>
+              <li>
+                <span class="degree">PhD – [Field]</span>
+                <span class="institution">[University], [Year]</span>
+              </li>
+              <li>
+                <span class="degree">MSc – [Field]</span>
+                <span class="institution">[University], [Year]</span>
+              </li>
+              <li>
+                <span class="degree">BSc – [Field]</span>
+                <span class="institution">[University], [Year]</span>
+              </li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Skills</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">Data Analysis</span>
+              <span class="skill-tag">LaTeX</span>
+              <span class="skill-tag">R</span>
+              <span class="skill-tag">[Add your skills]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <p class="section-subtitle">
+        My research addresses [overarching research question or theme].
+      </p>
+      <div class="research-grid">
+        <div class="research-card">
+          <div class="research-icon">🔬</div>
+          <h3>[Research Theme 1]</h3>
+          <p>
+            Brief description of the first major research thread. What problem does it solve?
+            What methods do you use? What impact does it have?
+          </p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">📊</div>
+          <h3>[Research Theme 2]</h3>
+          <p>
+            Brief description of the second major research thread. What problem does it solve?
+            What methods do you use? What impact does it have?
+          </p>
+        </div>
+        <div class="research-card">
+          <div class="research-icon">🤝</div>
+          <h3>[Research Theme 3]</h3>
+          <p>
+            Brief description of the third major research thread. What problem does it solve?
+            What methods do you use? What impact does it have?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <p class="section-subtitle">
+        Selected peer-reviewed publications. For the full list, see my
+        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> profile.
+      </p>
+
+      <div class="pub-list">
+
+        <!-- Publication item – duplicate and customise as needed -->
+        <article class="pub-item">
+          <div class="pub-badge journal">Journal</div>
+          <div class="pub-content">
+            <h3 class="pub-title">[Paper Title]</h3>
+            <p class="pub-authors">
+              <strong>[Your Name]</strong>, [Co-author 1], [Co-author 2]
+            </p>
+            <p class="pub-venue">
+              <em>[Journal / Conference Name]</em>, [Volume]([Issue]), [Pages], [Year]
+            </p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">PDF</a>
+              <a href="#" class="pub-link">DOI</a>
+              <a href="#" class="pub-link">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-badge conference">Conference</div>
+          <div class="pub-content">
+            <h3 class="pub-title">[Paper Title]</h3>
+            <p class="pub-authors">
+              <strong>[Your Name]</strong>, [Co-author 1]
+            </p>
+            <p class="pub-venue">
+              <em>[Conference Name (ABBREV)], [Year]</em>
+            </p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">PDF</a>
+              <a href="#" class="pub-link">Slides</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-badge preprint">Preprint</div>
+          <div class="pub-content">
+            <h3 class="pub-title">[Paper Title]</h3>
+            <p class="pub-authors">
+              <strong>[Your Name]</strong>, [Co-author 1], [Co-author 2]
+            </p>
+            <p class="pub-venue">
+              <em>arXiv</em>, [Year]
+            </p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">arXiv</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Open-source tools and side projects.</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">💡</span>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404 11.52 11.52 0 013.003.404c2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576C20.565 21.797 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3>[Project Name]</h3>
+          <p>
+            Short description of what this project does, what problem it solves, and
+            any notable stats (stars, downloads, users).
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">[technology]</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🛠️</span>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404 11.52 11.52 0 013.003.404c2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576C20.565 21.797 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3>[Project Name]</h3>
+          <p>
+            Short description of what this project does, what problem it solves, and
+            any notable stats.
+          </p>
+          <div class="project-tags">
+            <span class="tag">R</span>
+            <span class="tag">[technology]</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📦</span>
+            <div class="project-links">
+              <a href="#" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404 11.52 11.52 0 013.003.404c2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576C20.565 21.797 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3>[Project Name]</h3>
+          <p>
+            Short description of what this project does, what problem it solves, and
+            any notable stats.
+          </p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">[technology]</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="section">
+    <div class="container cv-container">
+      <h2 class="section-title">Curriculum Vitae</h2>
+      <p class="section-subtitle">
+        Download my full CV or browse highlights below.
+      </p>
+      <a href="assets/cv.pdf" download class="btn btn-primary cv-download">
+        ⬇ Download CV (PDF)
+      </a>
+
+      <div class="cv-timeline">
+
+        <div class="cv-group">
+          <h3 class="cv-group-title">Experience</h3>
+
+          <div class="cv-item">
+            <div class="cv-date">[Year] – Present</div>
+            <div class="cv-body">
+              <h4>[Position Title]</h4>
+              <p class="cv-org">[Organisation / University]</p>
+              <p>Short description of responsibilities and achievements.</p>
+            </div>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-date">[Year] – [Year]</div>
+            <div class="cv-body">
+              <h4>PhD Researcher</h4>
+              <p class="cv-org">[University]</p>
+              <p>
+                Thesis: "<em>[Your Thesis Title]</em>". Supervised by [Supervisor Name].
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cv-group">
+          <h3 class="cv-group-title">Teaching &amp; Mentoring</h3>
+
+          <div class="cv-item">
+            <div class="cv-date">[Year]</div>
+            <div class="cv-body">
+              <h4>Teaching Assistant – [Course Name]</h4>
+              <p class="cv-org">[University]</p>
+              <p>Brief description.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cv-group">
+          <h3 class="cv-group-title">Awards &amp; Grants</h3>
+
+          <div class="cv-item">
+            <div class="cv-date">[Year]</div>
+            <div class="cv-body">
+              <h4>[Award Name]</h4>
+              <p class="cv-org">[Awarding Body]</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        I'm always happy to discuss research collaborations, speaking opportunities,
+        or just interesting ideas. Feel free to reach out!
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <a href="https://github.com/[your-username]" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🎓</span>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐦</span>
+            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter / X</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your message…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © <span id="footerYear"></span> Dr. [Your Name] ·
+        Built with ❤️ and hosted on
+        <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
