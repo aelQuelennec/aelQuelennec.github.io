@@ -448,9 +448,9 @@ img { max-width: 100%; display: block; }
 
 /* .pub-badge.journal   { background: #dbeafe; color: #1d4ed8; } */
 .pub-badge.conference { background: #d1fae5; color: #065f46; }
-.pub-badge.workshop   { background: #fce7f3; color: #1d4ed8; }
+.pub-badge.workshop   { background: #e0e7ff; color: #1d4ed8; }
 .pub-badge.preprint  { background: #fef3c7; color: #92400e; }
-.pub-badge.manuscript  { background: #e0e7ff; color: #a330a1; }
+.pub-badge.manuscript  { background: #fce7f3; color: #a330a1; }
 
 .pub-content { flex: 1; }
 
