@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Aël Quélennec – Portfolio</title>
+  <title>Aël Quélennec – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-container">
-      <a class="nav-logo" href="#hero">Dr. Aël Quélennec</a>
+      <a class="nav-logo" href="#hero">Aël Quélennec</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -21,7 +21,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <!-- <li><a href="#projects">Projects</a></li> -->
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -33,12 +33,14 @@
     <div class="hero-content">
       <img src="assets/profile.jpg" alt="Profile photo" class="hero-avatar" id="heroAvatar" />
       <div class="hero-text">
-        <h1>Dr. <span class="highlight">Aël Quélennec</span></h1>
-        <p class="hero-tagline">Artificial Intelligence · PhD, Institut Polytechnique de Paris (Télécom Paris)</p>
+        <h1><span class="highlight">Aël Quélennec</span></h1>
+        <p class="hero-tagline">Artificial Intelligence and Cognitive Sciences</p>
+        <p class="hero-tagline">PhD, Télécom Paris - Institut Polytechnique de Paris</p>
         <p class="hero-subtitle">
           Rooted in energy- and memory-efficient AI for on-device learning, my research is expanding toward the broader challenges of sustainable and responsible AI.
-          Currently seeking a research position in AI applied to the biomedical field,
-          with a particular focus on neuroscience.
+        </p>
+        <p class="hero-subtitle">
+          Currently seeking a research position in AI applied to the biomedical field, with a particular focus on neuroscience.
         </p>
         <div class="hero-links">
           <a href="#contact" class="btn btn-primary">Get in touch</a>
@@ -59,17 +61,19 @@
             I recently completed my PhD in <strong>Artificial Intelligence &amp; Cognitive Sciences</strong> at
             <strong>Télécom Paris – Institut Polytechnique de Paris</strong>, where I focused on
             designing energy- and memory-efficient algorithms for embedded machine learning,
-            enabling neural networks to learn and adapt continuously directly on edge devices.
+            enabling neural networks to learn and adapt continuously directly on edge devices with the target goal
+            of deploying adaptive AI models on EEG headsets for real-time neural signal processing.
           </p>
           <p>
             Before my PhD, I obtained a dual engineering degree (M2 Data, Learning &amp; Knowledge)
             from Télécom Paris and Sorbonne Université. A defining early experience was my research
             internship at ENS Ulm's Department of Cognitive Studies, where working alongside cognitive
             scientists crystallised my interest in the intersection of AI and the study of the mind.
+          </p>
+          <p>
             I then spent a year as a Data Science Consultant at Headmind Partners, a formative period
             during which I strengthened my technical expertise as well as my professional and
-            interpersonal skills across complex, real-world projects. My research interests sit at the
-            crossroads of efficient AI and its applications to neuroscience and the biomedical field.
+            interpersonal skills across complex, real-world projects.
           </p>
           <p>
             Outside research, acting is perhaps my greatest passion. Through it, I have sharpened my
@@ -122,38 +126,49 @@
     <div class="container">
       <h2 class="section-title">Research</h2>
       <p class="section-subtitle">
-        My research addresses the fundamental bottlenecks that prevent practical on-device learning,
-        enabling neural networks to adapt continuously on resource-constrained edge devices.
+        The long-term vision driving my PhD is the deployment of adaptive AI models directly
+        on embedded devices such as EEG headsets as enabling real-time, privacy-preserving
+        neural signal processing at the edge represents a significant challenge. Achieving this requires rethinking how neural
+        networks learn under the severe memory and energy constraints of embedded hardware,
+        a challenge that lies at the heart of the green AI agenda. My work tackles this problem
+        along three complementary directions:
       </p>
       <div class="research-grid">
         <div class="research-card">
           <div class="research-icon">⚡</div>
           <h3>Dynamic Subnetwork Selection</h3>
           <p>
-            Adaptive methods that identify the most important network components to update at each
-            training step. From Velocity metric-based neuron selection to the TraDy framework
-            (heavy-tailed gradient theory) and MeDyate (stochastic channel selection), these
-            approaches achieve state-of-the-art performance under strict memory budgets.
+            Starting from a preliminary exploration of neuron selection based on a Velocity metric,
+            this line of work progressively deepened its theoretical grounding. TraDy emerged from
+            a thorough study of gradient dynamics during training, leveraging heavy-tailed gradient
+            theory to build a principled framework for layer and channel selection under strict memory
+            constraints. Building on this understanding, MeDyate further exploits gradient properties
+            through stochastic channel selection, translating theoretical insight into state-of-the-art
+            fine-tuning performance.
           </p>
         </div>
         <div class="research-card">
           <div class="research-icon">🗜️</div>
           <h3>Activation Map Compression</h3>
           <p>
-            Tensor decomposition-based methods (HOSVD, ASI) that compress the activation maps
-            stored during backpropagation — the dominant memory bottleneck during training.
-            ASI achieves up to 120× memory reduction and 91× computational speedup compared
-            to HOSVD while maintaining comparable accuracy.
+            This line of work begins by adapting traditional weight low-rank decomposition strategies to the compression of activation maps
+            stored during backpropagation, the dominant memory bottleneck during training. While
+            HOSVD demonstrates the strong compression potential of this approach, its high
+            decomposition cost makes it impractical for real-world use. ASI addresses this
+            limitation through a shortcut approach that bypasses the computational overhead,
+            achieving comparable memory reduction and accuracy to HOSVD while running faster
+            than standard uncompressed training.
           </p>
         </div>
         <div class="research-card">
           <div class="research-icon">🧠</div>
-          <h3>On-Device &amp; Biomedical AI</h3>
+          <h3>EEG/ECG Signal Acquisition</h3>
           <p>
-            Real-world deployment of efficient learning algorithms on embedded hardware (e.g.
-            Raspberry Pi), and application of AI to biomedical signals (EEG/ECG collection
-            protocols during attentional tasks). Bridging efficient AI with cognitive science
-            and neuroscience is the long-term direction of my research.
+            In parallel to my AI-focused research, I contributed to a group project designing
+            a data collection protocol for EEG and ECG signals during attentional tasks. The
+            protocol investigates three types of sensory cues (visual, auditory and haptic)
+            and involved the full pipeline from material selection, ethical and legal approval to code
+            conception and testing, leaving a protocol ready for deployment.
           </p>
         </div>
       </div>
@@ -165,25 +180,41 @@
     <div class="container">
       <h2 class="section-title">Publications</h2>
       <p class="section-subtitle">
-        Peer-reviewed publications from my PhD. For the full list, see my
-        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> profile.
+        PhD manuscript, peer-reviewed publications and pre-prints. See also my
+        <a href="https://scholar.google.com/citations?user=GmPAfRcAAAAJ&hl=fr" target="_blank" rel="noopener">Google Scholar</a> profile.
       </p>
 
       <div class="pub-list">
 
         <article class="pub-item">
-          <div class="pub-badge conference">Conference</div>
+          <div class="pub-badge preprint">Under Review</div>
           <div class="pub-content">
-            <h3 class="pub-title">Towards On-Device Learning on the Edge: Ways to Select Neurons to Update Under a Budget Constraint</h3>
+            <h3 class="pub-title">Memory Constrained Dynamic Subnetwork Update for Transfer Learning</h3>
             <p class="pub-authors">
-              <strong>Aël Quélennec</strong>, Enzo Tartaglione, Pavlo Mozharovskyi, Van-Tam Nguyen
+              <strong>Aël Quélennec</strong>, Pavlo Mozharovskyi, Van-Tam Nguyen, Enzo Tartaglione
             </p>
             <p class="pub-venue">
-              <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2024 · <strong>Oral Presentation</strong>
+              <em>Transactions on Machine Learning Research (TMLR)</em>, 2026 · Under Review
             </p>
             <div class="pub-links">
-              <a href="#" class="pub-link">PDF</a>
-              <a href="#" class="pub-link">Slides</a>
+              <a href="assets/MeDyate_Arxiv.pdf" download class="btn btn-primary cv-download">Preprint</a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="pub-item">
+          <div class="pub-badge manuscript">PhD Manuscript</div>
+          <div class="pub-content">
+            <h3 class="pub-title">Energy and Memory-Efficient Artificial Intelligence for On-Device Learning</h3>
+            <!-- <p class="pub-authors">
+              <strong>Aël Quélennec</strong>, Pavlo Mozharovskyi, Van-Tam Nguyen, Enzo Tartaglione
+            </p>
+            <p class="pub-venue">
+              <em>Transactions on Machine Learning Research (TMLR)</em>, 2026 · Under Review
+            </p> -->
+            <div class="pub-links">
+              <a href="assets/Ael_PhD_manuscript.pdf" download class="btn btn-primary cv-download">PDF</a>
+              <a href="assets/Ael_PhD_soutenance.pdf" download class="btn btn-primary cv-download">Slides</a>
             </div>
           </div>
         </article>
@@ -191,16 +222,17 @@
         <article class="pub-item">
           <div class="pub-badge conference">Conference</div>
           <div class="pub-content">
-            <h3 class="pub-title">Activation Map Compression through Tensor Decomposition for Deep Learning</h3>
+            <h3 class="pub-title">Study of Training Dynamics for Memory-Constrained Fine-Tuning</h3>
             <p class="pub-authors">
-              Le-Trung Nguyen, <strong>Aël Quélennec</strong>, Enzo Tartaglione, Samuel Tardieu, Van-Tam Nguyen
+              <strong>Aël Quélennec</strong>, Nour Hezbri, Pavlo Mozharovskyi, Van-Tam Nguyen, Enzo Tartaglione
             </p>
             <p class="pub-venue">
-              <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024 · Poster Presentation
+              <em>International Conference on Learning Representations (ICLR)</em>, 2026 · Poster Presentation
             </p>
             <div class="pub-links">
-              <a href="#" class="pub-link">PDF</a>
-              <a href="#" class="pub-link">Poster</a>
+              <a href="assets/ICLR2026_TraDy.pdf" download class="btn btn-primary cv-download">PDF</a>
+              <!-- <a href="#" class="pub-link">Slides</a>
+              <a href="#" class="pub-link">Poster</a> -->
             </div>
           </div>
         </article>
@@ -216,40 +248,43 @@
               <em>International Conference on Machine Learning (ICML)</em>, 2025 · Poster Presentation
             </p>
             <div class="pub-links">
-              <a href="#" class="pub-link">PDF</a>
-              <a href="#" class="pub-link">Poster</a>
+              <a href="assets/ICML2025_beyondlowrankdecomposition.pdf" download class="btn btn-primary cv-download">PDF</a>
+              <a href="assets/ICML_ASI_poster.pdf" download class="btn btn-primary cv-download">Poster</a>
             </div>
           </div>
         </article>
 
         <article class="pub-item">
-          <div class="pub-badge preprint">Under Review</div>
+          <div class="pub-badge conference">Conference</div>
           <div class="pub-content">
-            <h3 class="pub-title">Study of Training Dynamics for Memory-Constrained Fine-Tuning</h3>
+            <h3 class="pub-title">Activation Map Compression through Tensor Decomposition for Deep Learning</h3>
             <p class="pub-authors">
-              <strong>Aël Quélennec</strong>, Nour Hezbri, Pavlo Mozharovskyi, Van-Tam Nguyen, Enzo Tartaglione
+              Le-Trung Nguyen, <strong>Aël Quélennec</strong>, Enzo Tartaglione, Samuel Tardieu, Van-Tam Nguyen
             </p>
             <p class="pub-venue">
-              <em>International Conference on Learning Representations (ICLR)</em>, 2026 · Under Review
+              <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2024 · Poster Presentation
             </p>
             <div class="pub-links">
-              <a href="#" class="pub-link">Preprint</a>
+              <a href="assets/NeurIPS2024_activationmapcompression.pdf" download class="btn btn-primary cv-download">PDF</a>
+              <a href="assets/NeurIPS2024_activationmapcompression_poster.pdf" download class="btn btn-primary cv-download">Poster</a>
             </div>
           </div>
         </article>
 
         <article class="pub-item">
-          <div class="pub-badge preprint">Under Review</div>
+          <div class="pub-badge workshop">Workshop</div>
           <div class="pub-content">
-            <h3 class="pub-title">Memory Constrained Dynamic Subnetwork Update for Transfer Learning</h3>
+            <h3 class="pub-title">Towards On-Device Learning on the Edge: Ways to Select Neurons to Update Under a Budget Constraint</h3>
             <p class="pub-authors">
-              <strong>Aël Quélennec</strong>, Pavlo Mozharovskyi, Van-Tam Nguyen, Enzo Tartaglione
+              <strong>Aël Quélennec</strong>, Enzo Tartaglione, Pavlo Mozharovskyi, Van-Tam Nguyen
             </p>
             <p class="pub-venue">
-              <em>Transactions on Machine Learning Research (TMLR)</em>, 2026 · Under Review
+              <em>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</em>, 2024 · <strong>Oral Presentation</strong>
             </p>
             <div class="pub-links">
-              <a href="#" class="pub-link">Preprint</a>
+              <a href="assets/WACV2024_Velocity.pdf" download class="btn btn-primary cv-download">PDF</a>
+              <a href="assets/07_presentation.pdf" download class="btn btn-primary cv-download">Slides</a>
+              <a href="assets/Poster_06_12_2024.pdf" download class="btn btn-primary cv-download">Poster</a>
             </div>
           </div>
         </article>
@@ -258,7 +293,7 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects
   <section id="projects" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Projects</h2>
@@ -339,20 +374,20 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CV -->
   <section id="cv" class="section">
     <div class="container cv-container">
       <h2 class="section-title">Curriculum Vitae</h2>
       <p class="section-subtitle">
-        Download my full CV or browse highlights below.
+        Download my full CV below:
       </p>
       <a href="assets/cv.pdf" download class="btn btn-primary cv-download">
         ⬇ Download CV (PDF)
       </a>
 
-      <div class="cv-timeline">
+      <!-- <div class="cv-timeline">
 
         <div class="cv-group">
           <h3 class="cv-group-title">Experience</h3>
@@ -360,14 +395,14 @@
           <div class="cv-item">
             <div class="cv-date">2022 – 2025</div>
             <div class="cv-body">
-              <h4>PhD Researcher</h4>
+              <h4>PhD Student</h4>
               <p class="cv-org">Télécom Paris – Institut Polytechnique de Paris (LTCI)</p>
-              <p>
-                Thesis: <em>"Energy and Memory-Efficient Artificial Intelligence for On-Device Learning"</em>.
-                Supervised by Van-Tam Nguyen, Pavlo Mozharovskyi and Enzo Tartaglione.
-                Published at WACV 2024 (oral), NeurIPS 2024, ICML 2025, with further work under review at ICLR 2026 and TMLR.
-                Involved in teaching, student supervision, and design of an EEG/ECG acquisition protocol.
-              </p>
+                <ul>
+                <li>Thesis: <em>"Energy and Memory-Efficient Artificial Intelligence for On-Device Learning"</em></li>
+                <li>Supervised by Van-Tam Nguyen, Pavlo Mozharovskyi and Enzo Tartaglione</li>
+                <li>Published at WACV 2024 SCIOT workshop, NeurIPS 2024, ICML 2025, ICLR 2026 with further work under review at TMLR</li>
+                <li>Involved in teaching, student supervision and design of an EEG/ECG acquisition protocol</li>
+                </ul>
             </div>
           </div>
 
@@ -376,29 +411,29 @@
             <div class="cv-body">
               <h4>Data Science Consultant</h4>
               <p class="cv-org">Headmind Partners</p>
-              <p>
-                3-month NLP audit at L'Oréal (ethical classification of HR reports);
-                6-month project at Société Générale on intraday liquidity modelling;
-                internal R&amp;D on NLP tools.
-              </p>
+                <ul>
+                <li>3-month NLP audit at L'Oréal (ethical classification of HR reports)</li>
+                <li>6-month project at Société Générale on intraday liquidity modelling</li>
+                <li>Internal R&D on NLP tools</li>
+                </ul>
             </div>
           </div>
 
           <div class="cv-item">
-            <div class="cv-date">2020</div>
+            <div class="cv-date">2021</div>
             <div class="cv-body">
               <h4>Research Intern – Cognitive Studies</h4>
               <p class="cv-org">ENS Ulm – Département d'Études Cognitives (DEC)</p>
               <p>
                 Study of the emergence of human language models through genetic algorithm
-                optimisation of neural networks.
+                optimisation of neural networks
               </p>
             </div>
           </div>
 
-        </div>
+        </div> -->
 
-        <div class="cv-group">
+        <!-- <div class="cv-group">
           <h3 class="cv-group-title">Teaching &amp; Mentoring</h3>
 
           <div class="cv-item">
@@ -413,9 +448,9 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
 
-        <div class="cv-group">
+        <!-- <div class="cv-group">
           <h3 class="cv-group-title">Awards &amp; Distinctions</h3>
 
           <div class="cv-item">
@@ -434,7 +469,7 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -455,37 +490,18 @@
             <a href="mailto:aelkelen@yahoo.fr">aelkelen@yahoo.fr</a>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <a href="tel:+33770477599">+33 7 70 47 75 99</a>
-          </div>
-          <div class="contact-item">
             <span class="contact-icon">🔗</span>
-            <a href="https://linkedin.com/in/aelquelennec" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/aël-quélennec" target="_blank" rel="noopener">LinkedIn</a>
           </div>
           <div class="contact-item">
             <span class="contact-icon">🐙</span>
-            <a href="https://github.com/aelquelennec" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/aelQuelennec" target="_blank" rel="noopener">GitHub</a>
           </div>
           <div class="contact-item">
             <span class="contact-icon">🎓</span>
-            <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://scholar.google.com/citations?user=GmPAfRcAAAAJ&hl=fr" target="_blank" rel="noopener">Google Scholar</a>
           </div>
         </div>
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Your message…"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
       </div>
     </div>
   </section>
@@ -494,8 +510,8 @@
   <footer class="site-footer">
     <div class="container">
       <p>
-        © <span id="footerYear"></span> Dr. Aël Quélennec ·
-        Built with ❤️ and hosted on
+        © <span id="footerYear"></span> Aël Quélennec ·
+        Hosted on
         <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>
       </p>
     </div>
