@@ -446,7 +446,7 @@ img { max-width: 100%; display: block; }
   margin-top: 4px;
 }
 
-/* .pub-badge.journal   { background: #dbeafe; color: #1d4ed8; } */
+.pub-badge.journal   { background: #fef9c3; color: #85670e; }
 .pub-badge.conference { background: #d1fae5; color: #065f46; }
 .pub-badge.workshop   { background: #e0e7ff; color: #1d4ed8; }
 .pub-badge.preprint  { background: #fef3c7; color: #92400e; }
